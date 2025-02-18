@@ -1,0 +1,12 @@
+<suite name="myTestSuite">
+<test name="myTest">
+<classes>
+<class name="testscript.LoginTest">
+<methods>
+<include name="verifyUserLoginWithValidCredentials"></include>
+</methods>
+</class>
+
+</classes>
+</test>
+</suite>
