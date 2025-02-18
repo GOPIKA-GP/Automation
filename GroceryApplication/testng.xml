@@ -1,0 +1,18 @@
+<suite name="myTestSuite">
+<parameter name="browser" value="Chrome"></parameter>
+	<listeners>
+		<listener class-name="listeners.Listeners"></listener>
+		<!-- <listener class-name="listeners.RetryListner"></listener>-->
+	</listeners>
+	<test name="myTest">
+		<classes>
+
+			<class name="testscripts.ManageProductTest">
+				<methods>
+					<include
+						name="checkWhetherAdminCanManageExistingProductsStatus"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

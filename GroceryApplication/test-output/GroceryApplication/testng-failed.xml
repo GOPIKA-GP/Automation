@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [GroceryApplication]">
+  <test thread-count="2" parallel="tests" name="ChromeTest(failed)">
+    <parameter name="browser" value="Chrome"/>
+    <groups>
+      <run>
+        <include name="smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="testscripts.LoginTest">
+        <methods>
+          <include name="verifyUserWithValidCredentials"/>
+          <include name="verifyUserLoginWithInvalidUsenameAndInvalidPassword" invocation-numbers="0 1 2 3"/>
+          <include name="verifyUserLoginWithInvalidUsenameAndValidPassword"/>
+          <include name="verifyUserLoginWithValidUsenameAndInvalidPassword"/>
+        </methods>
+      </class> <!-- testscripts.LoginTest -->
+      <class name="testscripts.AdminUserTest">
+        <methods>
+          <include name="verifyIfNewAdminUserCanBeAdd"/>
+          <include name="searchNewAddedAdminUser"/>
+        </methods>
+      </class> <!-- testscripts.AdminUserTest -->
+    </classes>
+  </test> <!-- ChromeTest(failed) -->
+</suite> <!-- Failed suite [GroceryApplication] -->
