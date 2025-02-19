@@ -32,7 +32,7 @@ import utilities.WaitUtility;
 	@FindBy(xpath="//input[@class='form-control']")WebElement subcategorysearchfield;
 	@FindBy(xpath="//button[@class='btn btn-danger btn-fix']")WebElement clickonsearchbutton;
 	@FindBy(xpath="//center[text()='.........RESULT NOT FOUND.......']")WebElement notfoundmessage;
-	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/Subcategory/edit?edit=2620&page_ad=1']")WebElement editbutton;
+	@FindBy(xpath="//a[@class='btn btn-sm btn btn-primary btncss']")WebElement editbutton;
 	@FindBy(xpath="//input[@name='main_img']")WebElement imageuploadoption;
 	@FindBy(xpath="//button[@class='btn btn-danger']")WebElement updatebutton;
 	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")WebElement updatealeart;

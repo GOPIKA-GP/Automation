@@ -24,7 +24,6 @@ public class ManageProductTest extends BaseClass
 	  manageproduct=homepage.clickOnManageProduct().clickToUpdateProductAvailability();
 	  
 	  boolean alertdisplayed=manageproduct.isProductAvailabilityUpdateAleartDisplayed();
-	  //Assert.assertEquals(alertdisplayed, "Product Status Changed Successfully");
 	 Assert.assertTrue(alertdisplayed,"Product Status Changed Successfully");
 	  
 	 

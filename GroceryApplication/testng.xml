@@ -6,13 +6,13 @@
 	</listeners>
 	<test name="myTest">
 		<classes>
-
-			<class name="testscripts.ManageProductTest">
-				<methods>
-					<include
-						name="checkWhetherAdminCanManageExistingProductsStatus"></include>
-				</methods>
+			<class name="testscripts.SubCategoryTest">
+			<methods>
+			<include name="checkIfAdminCanEditAnExisingSubCategorySucessfully">
+			</include>
+			</methods>
 			</class>
+					
 		</classes>
 	</test>
 </suite>
