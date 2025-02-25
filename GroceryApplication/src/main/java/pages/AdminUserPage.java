@@ -33,7 +33,7 @@ public class AdminUserPage {
 	@FindBy(xpath="//input[@id='un']")WebElement searchresult; 
 	@FindBy(xpath="//a[@class='btn btn-sm btn btn-primary btncss']")WebElement editbutton;
 	@FindBy(xpath="//button[@class='btn btn-block-sm btn-info']")WebElement updatebutton;
-	@FindBy(xpath="////img[@class='img-circle elevation-2']")WebElement successalert;
+	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")WebElement successalert;
 	
 	public AdminUserPage manageCategoryPage()
 	{

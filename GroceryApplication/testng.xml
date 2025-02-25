@@ -6,13 +6,12 @@
 	</listeners>
 	<test name="myTest">
 		<classes>
-			<class name="testscripts.SubCategoryTest">
-			<methods>
-			<include name="checkIfAdminCanEditAnExisingSubCategorySucessfully">
-			</include>
-			</methods>
-			</class>
-					
+			    <class name="testscripts.AdminUserTest"></class>
+				<class name="testscripts.CategoryTest"></class>
+				<class name="testscripts.ManageContactTest"></class>	
+				<class name="testscripts.ManageNewsTest"></class>
+				<class name="testscripts.ManageProductTest"></class>
+				<class name="testscripts.SubCategoryTest"></class>
 		</classes>
 	</test>
 </suite>

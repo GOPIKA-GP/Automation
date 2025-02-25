@@ -17,7 +17,7 @@ public class Retry implements IRetryAnalyzer
 			if (this.count < maxTry) {       
 				LOG.info("Retrying test " + iTestResult.getName() + " with status "
 						+ getResultStatusName(iTestResult.getStatus()) + " for the " + (this.count + 1) + " time(s).");
-this.count++;
+                 this.count++;
 				return true; //Indicates retry attempt			
 				}
 		}

@@ -7,13 +7,13 @@
   </listeners>
   <test thread-count="5" name="myTest(failed)">
     <classes>
-      <class name="testscripts.SubCategoryTest">
+      <class name="testscripts.AdminUserTest">
         <methods>
           <include name="driverQuit"/>
+          <include name="verifyWhetherAdminCanEditUserData"/>
           <include name="initialiseBrowser"/>
-          <include name="checkIfAdminCanEditAnExisingSubCategorySucessfully"/>
         </methods>
-      </class> <!-- testscripts.SubCategoryTest -->
+      </class> <!-- testscripts.AdminUserTest -->
     </classes>
   </test> <!-- myTest(failed) -->
 </suite> <!-- Failed suite [myTestSuite] -->

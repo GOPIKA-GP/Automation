@@ -49,8 +49,8 @@ public class AdminUserTest extends BaseClass {
 	  adminuser=homepage.clickOnAdminUser().manageCategoryPage().clickOnSearchButton().enterSearchUsername()
 			  .clickOnSearchUserButton().clickOnEditButton().editPasswordInField().clickOnUpdateButton();
 	  
-	  boolean isUpdateAlertMessageShown = adminuser.isUserDetailsUpdated();
-		 Assert.assertTrue(isUpdateAlertMessageShown,Constant.adminuser_SuccessAlert); 
+	boolean isUpdateAlertMessageShown = adminuser.isUserDetailsUpdated();
+	Assert.assertTrue(isUpdateAlertMessageShown,Constant.adminuser_SuccessAlert); 
   }
   
   

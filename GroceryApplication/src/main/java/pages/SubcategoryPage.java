@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import constants.Constant;
 import utilities.FileUploadUtility;
 import utilities.PageUtility;
 import utilities.WaitUtility;
@@ -105,7 +107,7 @@ import utilities.WaitUtility;
     	
    		String subcategorysearchname="soft";
    		subcategorysearchfield.sendKeys(subcategorysearchname);
-   		//waitutility.waitUntilElementisVisisble(driver, subcategorysearchfield);
+   		waitutility.waitUntilElementisVisisble(driver, subcategorysearchfield);
    		return this;
    	}
     public SubcategoryPage clickonEditButton()
@@ -118,7 +120,7 @@ import utilities.WaitUtility;
     {
     	//imageuploadoption.click();
     	//pageutility.clickJavaScriptExecutor(imageuploadoption, driver);
-		String imagePath = System.getProperty("user.dir")+"\\src\\test\\resources\\images\\softtoys.jpg";
+		String imagePath = Constant.ImagePath3;
 	    fileuploadutility.fileuploadingusingsendkeys(imageuploadoption, imagePath);
     	return this;
     }

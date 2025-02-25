@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import constants.Constant;
 import utilities.FileUploadUtility;
 import utilities.PageUtility;
 import utilities.WaitUtility;
@@ -60,7 +62,7 @@ public class CategoryPage {
 	{
 		pageutility.clickJavaScriptExecutor(uploadimage, driver);
 		
-		String imagePath = System.getProperty("user.dir") + "/src/test/resources/images/FASHION.jpg";
+		String imagePath = Constant.ImagePath1;
 	    fileuploadutility.fileuploadingusingsendkeys(uploadimage, imagePath);
 	    
 	    waitutility.waitUntilImageisVisisble(driver, uploadimage);
@@ -138,7 +140,7 @@ public class CategoryPage {
 		waitutility.waitUntilElementisVisisble(driver, categoryfield);
 		
 		pageutility.clickJavaScriptExecutor(uploadimage, driver);
-		String imagePath = System.getProperty("user.dir") + "/src/test/resources/images/icecream.jpg";
+		String imagePath = Constant.ImagePath2;
 	    fileuploadutility.fileuploadingusingsendkeys(uploadimage, imagePath);
 	    waitutility.waitUntilImageisVisisble(driver, uploadimage);
 		

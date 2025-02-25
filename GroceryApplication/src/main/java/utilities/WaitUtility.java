@@ -12,23 +12,24 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class WaitUtility {
 	public static int implicitWaitDuration=5;
+	
 	public void fluentWaitElements(WebDriver driver, WebElement element, String attribute, String attributeValue,int total) 
 	{
 		Wait<WebDriver> fluentWait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(total))
 				.pollingEvery(Duration.ofSeconds(2)).ignoring(NoSuchElementException.class);
 		fluentWait.until(ExpectedConditions.attributeContains(element, attribute, attributeValue));
 	}
-	public void waitForWebElementAlert(WebDriver driver) 
+	public void waitForWebElementAlert(WebDriver driver) //explicit wait
 	{
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		wait.until(ExpectedConditions.alertIsPresent());
 	}
-	public void waitUntilElementisVisisble(WebDriver driver, WebElement element)
+	public void waitUntilElementisVisisble(WebDriver driver, WebElement element)//explicit wait
 	{
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
-	public void waitUntilImageisVisisble(WebDriver driver, WebElement element)
+	public void waitUntilImageisVisisble(WebDriver driver, WebElement element)//explicit wait
 	{
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		wait.until(ExpectedConditions.visibilityOf(element));

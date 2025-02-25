@@ -37,23 +37,27 @@ public class PageUtility
 		WebElement selectedElement = object.getFirstSelectedOption();
 		return selectedElement.getText();
 	}
-	public void clickJavaScriptExecutor(WebElement element, WebDriver driver) {
+	public void clickJavaScriptExecutor(WebElement element, WebDriver driver) 
+	{
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click()", element);
-		}
+	}
 
-		public void clickJavaScriptExecutorByScroll(WebDriver driver, List<WebElement> elements, int index) {
+	public void clickJavaScriptExecutorByScroll(WebDriver driver, List<WebElement> elements, int index) 
+	{
 		JavascriptExecutor je = (JavascriptExecutor) driver;
 		je.executeScript("arguments[0].scrollIntoView(true);", elements.get(index));
-		}
+	}
 	
-	public int random(int limit) {
+	public int random(int limit) 
+	{
 		Random random = new Random();
 		// int limit = 1000;
 		int randomNumber = random.nextInt(limit);
 		return randomNumber;
 	}
-    public String generateCurrentDateAndTime() {
+    public String generateCurrentDateAndTime() 
+    {
 		Date date = new Date();
 		SimpleDateFormat formatter = new SimpleDateFormat("ddMMyyhhmmss");
 		return formatter.format(date);

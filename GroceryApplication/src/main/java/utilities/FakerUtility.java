@@ -6,32 +6,38 @@ public class FakerUtility
 {
 	
 	Faker faker=new Faker();
-public String firstName() 
+	public String firstName() 
 	{
 		return faker.name().firstName();
 	}
-public String generateFullName() 
+	
+	public String generateFullName() 
 	{
 		return faker.name().fullName();    
     }
-public String generateAddress()
+	
+	public String generateAddress()
 	{
 		return faker.address().fullAddress();
 	}
-public String generatePhoneNumber()
+	
+	public String generatePhoneNumber()
 	{
 		return faker.phoneNumber().toString();
 	}
-public String company() 
-   {
+	
+	public String company() 
+    {
 	return faker.company().name();
-   }
-public String emailId() 
-{
+    }
+	
+	public String emailId() 
+	{
 	return faker.internet().emailAddress();
-}
-public String dateOfBirth() 
-{
+	}
+	
+	public String dateOfBirth() 
+	{
 	return faker.date().birthday().toString();
-}
+	}
 }
