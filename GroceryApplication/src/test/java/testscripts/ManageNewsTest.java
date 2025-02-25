@@ -25,7 +25,7 @@ public class ManageNewsTest extends BaseClass {
 	  managenews=homepage.clickOnManageNews().clickOnNewNewsButton().enterTheNews().clickOnSaveButton();
 	  
 	  boolean isaleartpresent=managenews.isAleartMessageDispalyed();
-	  Assert.assertTrue(isaleartpresent,Constant.managenews_sucessfullyMessageAlert);
+	  Assert.assertTrue(isaleartpresent,Constant.mn_FailAlert);
   }
   
   
@@ -37,7 +37,7 @@ public class ManageNewsTest extends BaseClass {
 	 managenews=homepage.clickOnManageNews().clickOnSearchOption().enterDataToSearch().clickOnSearchButton();
 	 
 	 boolean isaleartpresent=managenews.isSearchAleartMessageDispalyed();
-	 Assert.assertTrue(isaleartpresent, Constant.managenews_searchResultSucessfull);
+	 Assert.assertTrue(isaleartpresent, Constant.mn_searchResult);
 	 
  }
  
@@ -51,7 +51,7 @@ public class ManageNewsTest extends BaseClass {
 			  .clickOnEditButton().enterTheEditedNews().clickOnUpdateButton();
 	  
 	  boolean isaleartpresent=managenews.isAleartMessageDispalyed();
-	  Assert.assertTrue(isaleartpresent,Constant.managenews_sucessfullyMessageAlert);  
+	  Assert.assertTrue(isaleartpresent,Constant.mn_FailAlert);  
  }
 
 }

@@ -26,7 +26,7 @@ public class ManageContactTest extends BaseClass {
 				  .editDeliverChargeTimeField().clickUpdateButton();
 		  
 		  boolean isaleartmsgdisplayed=managecontactpage.isUpdatedContactDetails();
-		  Assert.assertTrue(isaleartmsgdisplayed,Constant.managecontact_SuccesAlert);
+		  Assert.assertTrue(isaleartmsgdisplayed,Constant.mc_FailAlert);
 		  
     }
 }

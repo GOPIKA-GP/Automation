@@ -65,7 +65,7 @@ public class CategoryPage {
 		String imagePath = Constant.ImagePath1;
 	    fileuploadutility.fileuploadingusingsendkeys(uploadimage, imagePath);
 	    
-	    waitutility.waitUntilImageisVisisble(driver, uploadimage);
+	    waitutility.waitUntilElementisVisisble(driver, uploadimage);
 	    return this;
 	}
 	public CategoryPage clickOnRadioButtons()
@@ -101,7 +101,7 @@ public class CategoryPage {
 	public CategoryPage clickOnSearchCategoryButton()
 	{
 		pageutility.clickJavaScriptExecutor(clicksearch, driver);
-		waitutility.waitForsearchOption(driver);
+		waitutility.implicitWait(driver);
 		return this;
 	}
 	
@@ -142,7 +142,7 @@ public class CategoryPage {
 		pageutility.clickJavaScriptExecutor(uploadimage, driver);
 		String imagePath = Constant.ImagePath2;
 	    fileuploadutility.fileuploadingusingsendkeys(uploadimage, imagePath);
-	    waitutility.waitUntilImageisVisisble(driver, uploadimage);
+	    waitutility.waitUntilElementisVisisble(driver, uploadimage);
 		
 		return this;
 	}

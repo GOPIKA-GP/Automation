@@ -25,7 +25,7 @@ public class AdminUserTest extends BaseClass {
 			  .enterPasswordInField().userTypeDropDrown().clickOnSaveButton();
 			    
 	 boolean isAlertMessageShown = adminuser.isNewAdminUserCreated();
-	 Assert.assertTrue(isAlertMessageShown,Constant.adminuser_SuccessAlert);
+	 Assert.assertTrue(isAlertMessageShown,Constant.au_failAlert);
   }
   
   
@@ -38,7 +38,7 @@ public class AdminUserTest extends BaseClass {
 			  .clickOnSearchUserButton();
 	  
 	 boolean issearchresult=adminuser.isSearchAdminUserDisplayed();
-	 Assert.assertEquals(issearchresult,true,Constant.adminuser_SearchData);  
+	 Assert.assertEquals(issearchresult,true,Constant.au_SearchData);  
   }
   
   @Test
@@ -50,7 +50,7 @@ public class AdminUserTest extends BaseClass {
 			  .clickOnSearchUserButton().clickOnEditButton().editPasswordInField().clickOnUpdateButton();
 	  
 	boolean isUpdateAlertMessageShown = adminuser.isUserDetailsUpdated();
-	Assert.assertTrue(isUpdateAlertMessageShown,Constant.adminuser_SuccessAlert); 
+	Assert.assertTrue(isUpdateAlertMessageShown,Constant.au_failAlert); 
   }
   
   

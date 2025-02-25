@@ -27,7 +27,7 @@ public class SubCategoryTest extends BaseClass
 			  			.enterSubCategoryField().clickOnSaveButton();
 	  
 	  boolean isaleartpresent=scpage.isAleartDisplayed();
-	  Assert.assertTrue(isaleartpresent, Constant.subCategory_AlertMaessage1);  
+	  Assert.assertTrue(isaleartpresent, Constant.sc_AlertMaessage1);  
   }
   
   @Test
@@ -40,7 +40,7 @@ public class SubCategoryTest extends BaseClass
 	  			.enterseachSubCategoryField().clickonSeachButton();
 	 
 	  boolean isaleartpresent=scpage.isSearchResultsValid();
-	  Assert.assertTrue(isaleartpresent,Constant.subCategory_InvalidDataAlert); 
+	  Assert.assertTrue(isaleartpresent,Constant.sc_InvalidDataAlert); 
   }
  
   @Test
@@ -52,7 +52,7 @@ public class SubCategoryTest extends BaseClass
 			  .clickonEditButton().clickonUploadPhotoOption().clickonUpdateButton(); 
 	  
 	  boolean updatealeart=scpage.isUpdateAleartDisplayed();
-	  Assert.assertTrue(updatealeart,Constant.subCategory_AlertMaessage2); 
+	  Assert.assertTrue(updatealeart,Constant.sc_AlertMaessage2); 
 	  
   }
 

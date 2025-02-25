@@ -2,7 +2,7 @@
 <parameter name="browser" value="Chrome"></parameter>
 	<listeners>
 		<listener class-name="listeners.Listeners"></listener>
-		<!-- <listener class-name="listeners.RetryListner"></listener>-->
+		<listener class-name="listeners.RetryListner"></listener>
 	</listeners>
 	<test name="myTest">
 		<classes>

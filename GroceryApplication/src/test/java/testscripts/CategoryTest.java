@@ -27,7 +27,7 @@ public class CategoryTest extends BaseClass  {
 					  				.clickOnSelectGroups().uploadImage().clickOnSaveButton();
 					  				
 		      boolean actualresult=categorypage.isaleartNewCategoryAdded();
-		      Assert.assertTrue(actualresult, Constant.category_SuccessAlert1);
+		      Assert.assertTrue(actualresult, Constant.ctgy_AlertMessage1);
 		  }
 		  
 		  @Test
@@ -38,7 +38,7 @@ public class CategoryTest extends BaseClass  {
 			  categorypage=homepage.clickOnCategory().clickOnSearchOption().enterTheSearchDetails().clickOnSearchCategoryButton();
 
 			  boolean actualresult=categorypage.isSearchResultAppears();
-			  Assert.assertTrue(actualresult,Constant.category_NotFoundAlert2);
+			  Assert.assertTrue(actualresult,Constant.ctgy_NotFoundAlert);
 		  }
 		  
 		  @Test
@@ -49,7 +49,7 @@ public class CategoryTest extends BaseClass  {
 			  categorypage=homepage.clickOnCategory().clickOnStatusButton();
 			
 			  boolean actualresult=categorypage.isStatusChanged();
-			  Assert.assertTrue(actualresult, Constant.category_SuccessAlert3);
+			  Assert.assertTrue(actualresult, Constant.ctgy_AlertMessage2);
 		  }
 		  
 		  @Test
@@ -61,6 +61,6 @@ public class CategoryTest extends BaseClass  {
 					  clickOnSearchCategoryButton().clickOnEditCategoryButton().clickOnSaveButton();
 			
 			  boolean actualresult=categorypage.isaleartNewCategoryAdded();
-		      Assert.assertTrue(actualresult, Constant.category_SuccessAlert1);
+		      Assert.assertTrue(actualresult, Constant.ctgy_AlertMessage1);
 		  }
 }

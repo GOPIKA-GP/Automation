@@ -38,7 +38,7 @@ public class AdminUserPage {
 	public AdminUserPage manageCategoryPage()
 	{
 	pageutility.clickJavaScriptExecutor(adminusersbutton, driver);
-	waitutility.implicitWaitForNewFrame(driver);
+	waitutility.implicitWait(driver);
 	return this;
 	
 	}
