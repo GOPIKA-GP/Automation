@@ -14,7 +14,6 @@ public class WaitUtility {
 	public static int fluentWaitDuration = 5;
 	public static int explicitWaitDuration = 5;
 	public static int implicitWaitDuration = 10;
-	
 
 	public void fluentWaitElements(WebDriver driver, WebElement element, String attribute, String attributeValue,
 			int total) {
@@ -22,7 +21,7 @@ public class WaitUtility {
 				.pollingEvery(Duration.ofSeconds(fluentWaitDuration)).ignoring(NoSuchElementException.class);
 		fluentWait.until(ExpectedConditions.attributeContains(element, attribute, attributeValue));
 	}
-	
+
 	public void fluentWaitElementsAlert(WebDriver driver, WebElement element, String attribute, String attributeValue,
 			int total) {
 		Wait<WebDriver> fluentWait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(total))
@@ -41,7 +40,7 @@ public class WaitUtility {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(explicitWaitDuration));
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
-	
+
 	public void waitUntilAllElementInVisisble(WebDriver driver, WebElement element)// explicit wait
 	{
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(explicitWaitDuration));
@@ -53,19 +52,20 @@ public class WaitUtility {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(explicitWaitDuration));
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 	}
-	
+
 	public void waitUntilAttributeContains(WebDriver driver, WebElement element)// explicit wait
 	{
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(explicitWaitDuration));
 		wait.until(ExpectedConditions.elementSelectionStateToBe(element, false));
 	}
-	
-	public void implicitWait(WebDriver driver) //implicit wait
+
+	public void implicitWait(WebDriver driver) // implicit wait
 	{
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(implicitWaitDuration));
 	}
-	public static void disableImplicitWait(WebDriver driver) //disables implicit wait
+
+	public static void disableImplicitWait(WebDriver driver) // disables implicit wait
 	{
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(0));
-    }
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(0));
+	}
 }

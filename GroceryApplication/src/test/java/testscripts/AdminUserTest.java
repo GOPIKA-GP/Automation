@@ -11,47 +11,42 @@ import pages.HomePage;
 import pages.LoginPage;
 
 public class AdminUserTest extends BaseClass {
-	
-	  LoginPage login;
-	  HomePage homepage;
-	  AdminUserPage adminuser;
-	  
-  @Test(groups="smoke")
-  public void checkIfNewAdminUserCanBeCreate() throws IOException 
-  {
-	  login=new LoginPage(driver);
-	  homepage=login.loginUsingExcelData();
-	  adminuser=homepage.clickOnAdminUser().manageCategoryPage().clickOnNewButton().enterUserNameInField()
-			  .enterPasswordInField().userTypeDropDrown().clickOnSaveButton();
-			    
-	 boolean isAlertMessageShown = adminuser.isNewAdminUserCreated();
-	 Assert.assertTrue(isAlertMessageShown,Constant.au_failAlert);
-  }
-  
-  
-  @Test(groups="smoke")
-  public void checkIfAdminCanSearchNewAddedUser() throws IOException
-  {
-	  login=new LoginPage(driver);
-	  homepage=login.loginUsingExcelData();
-	  adminuser=homepage.clickOnAdminUser().manageCategoryPage().clickOnSearchButton().enterSearchUsername()
-			  .clickOnSearchUserButton();
-	  
-	 boolean issearchresult=adminuser.isSearchAdminUserDisplayed();
-	 Assert.assertEquals(issearchresult,true,Constant.au_SearchData);  
-  }
-  
-  @Test
-  public void verifyWhetherAdminCanEditUserData() throws IOException
-  {
-	  login=new LoginPage(driver);
-	  homepage=login.loginUsingExcelData();
-	  adminuser=homepage.clickOnAdminUser().manageCategoryPage().clickOnSearchButton().enterSearchUsername()
-			  .clickOnSearchUserButton().clickOnEditButton().editPasswordInField().clickOnUpdateButton();
-	  
-	boolean isUpdateAlertMessageShown = adminuser.isUserDetailsUpdated();
-	Assert.assertTrue(isUpdateAlertMessageShown,Constant.au_failAlert); 
-  }
-  
-  
+
+	LoginPage login;
+	HomePage homepage;
+	AdminUserPage adminuser;
+
+	@Test(groups = "smoke")
+	public void checkIfNewAdminUserCanBeCreate() throws IOException {
+		login = new LoginPage(driver);
+		homepage = login.loginUsingExcelData();
+		adminuser = homepage.clickOnAdminUser().manageCategoryPage().clickOnNewButton().enterUserNameInField()
+				.enterPasswordInField().userTypeDropDrown().clickOnSaveButton();
+
+		boolean isAlertMessageShown = adminuser.isNewAdminUserCreated();
+		Assert.assertTrue(isAlertMessageShown, Constant.au_failAlert);
+	}
+
+	@Test(groups = "smoke")
+	public void checkIfAdminCanSearchNewAddedUser() throws IOException {
+		login = new LoginPage(driver);
+		homepage = login.loginUsingExcelData();
+		adminuser = homepage.clickOnAdminUser().manageCategoryPage().clickOnSearchButton().enterSearchUsername()
+				.clickOnSearchUserButton();
+
+		boolean issearchresult = adminuser.isSearchAdminUserDisplayed();
+		Assert.assertEquals(issearchresult, true, Constant.au_SearchData);
+	}
+
+	@Test
+	public void verifyWhetherAdminCanEditUserData() throws IOException {
+		login = new LoginPage(driver);
+		homepage = login.loginUsingExcelData();
+		adminuser = homepage.clickOnAdminUser().manageCategoryPage().clickOnSearchButton().enterSearchUsername()
+				.clickOnSearchUserButton().clickOnEditButton().editPasswordInField().clickOnUpdateButton();
+
+		boolean isUpdateAlertMessageShown = adminuser.isUserDetailsUpdated();
+		Assert.assertTrue(isUpdateAlertMessageShown, Constant.au_failAlert);
+	}
+
 }

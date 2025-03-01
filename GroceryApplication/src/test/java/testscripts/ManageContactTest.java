@@ -14,19 +14,18 @@ import pages.ManageContactPage;
 public class ManageContactTest extends BaseClass {
 	LoginPage login;
 	HomePage homepage;
-	ManageContactPage managecontactpage;  
-  
+	ManageContactPage managecontactpage;
+
 	@Test
-  public void verifyIfAdminCanUpdateContactDetails() throws IOException 
-	{
-		  login=new LoginPage(driver);
-		  homepage=login.loginUsingExcelData();
-		  managecontactpage=homepage.clickOnManageContact().clickOnActionButton()
-				  .editPhoneNumberFiled().editEmailFiled().editAddressField().editDeliverTimeField()
-				  .editDeliverChargeTimeField().clickUpdateButton();
-		  
-		  boolean isaleartmsgdisplayed=managecontactpage.isUpdatedContactDetails();
-		  Assert.assertTrue(isaleartmsgdisplayed,Constant.mc_FailAlert);
-		  
-    }
+	public void verifyIfAdminCanUpdateContactDetails() throws IOException {
+		login = new LoginPage(driver);
+		homepage = login.loginUsingExcelData();
+		managecontactpage = homepage.clickOnManageContact().clickOnActionButton().editPhoneNumberFiled()
+				.editEmailFiled().editAddressField().editDeliverTimeField().editDeliverChargeTimeField()
+				.clickUpdateButton();
+
+		boolean isaleartmsgdisplayed = managecontactpage.isUpdatedContactDetails();
+		Assert.assertTrue(isaleartmsgdisplayed, Constant.mc_FailAlert);
+
+	}
 }

@@ -19,8 +19,7 @@ public class ScreenShotUtility {
 		File screenShot = scrShot.getScreenshotAs(OutputType.FILE);
 
 		File f1 = new File(System.getProperty("user.dir") + "\\OutputScreenshots");
-		if (!f1.exists()) 
-		{
+		if (!f1.exists()) {
 
 			f1.mkdirs();
 		}
