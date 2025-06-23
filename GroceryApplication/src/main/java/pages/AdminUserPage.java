@@ -52,7 +52,6 @@ public class AdminUserPage {
 		pageutility.clickJavaScriptExecutor(adminusersbutton, driver);
 		waitutility.implicitWait(driver);
 		return this;
-
 	}
 
 	public AdminUserPage clickOnNewButton() {

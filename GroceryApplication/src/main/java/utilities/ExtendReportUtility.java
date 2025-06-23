@@ -15,4 +15,3 @@ public class ExtendReportUtility {
 		return extentReports;
 	}
 }
-//Extend Report utility is calling in Listeners

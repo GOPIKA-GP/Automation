@@ -22,8 +22,7 @@ public class WaitUtility {
 		fluentWait.until(ExpectedConditions.attributeContains(element, attribute, attributeValue));
 	}
 
-	public void fluentWaitElementsAlert(WebDriver driver, WebElement element, String attribute, String attributeValue,
-			int total) {
+	public void fluentWaitElementsAlert(WebDriver driver,int total) {
 		Wait<WebDriver> fluentWait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(total))
 				.pollingEvery(Duration.ofSeconds(fluentWaitDuration)).ignoring(NoSuchElementException.class);
 		fluentWait.until(ExpectedConditions.alertIsPresent());
